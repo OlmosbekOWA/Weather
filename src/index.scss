@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
+
 }
 body{
   width: 100%;
@@ -14,4 +14,16 @@ body{
   background-image: url("./assets/image/bg-weather\ \(1\).png");
   background-repeat: no-repeat;
   background-size:cover;
+}
+
+@media(max-width:930px){
+  body{
+    background-image: url("./assets/image/bg-weather.png");
+  }
+}
+
+@media(max-width:620px){
+  body{
+    background-image: url("./assets/image/bg-weather (2).png");
+  }
 }

@@ -9,6 +9,7 @@ import rain from "./assets/image/rain.png";
 import wind from "./assets/image/wind.png";
 
 function App() {
+  
   const [satate, setState] = useState("Qarshi");
   const [val, setVal] = useState("");
 
@@ -24,6 +25,7 @@ function App() {
   
   function searchRef() {
     setState(val.trim() || "Qarshi");
+
   }
 
   useEffect(() => {
@@ -33,7 +35,7 @@ function App() {
 
   const apiKey = "e7f7536f27964360967121249251805";
   
-  const day = 5;
+  const day = 1;
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -102,7 +104,6 @@ function App() {
           <button onClick={()=>searchRef()}>SUBMIT</button>
         </div>
       </header>
-
       {weatherData ? (
         <main>
           <div className="divayder">
@@ -134,7 +135,7 @@ function App() {
                 <div className="temp">
                   <p>Temp min</p>
                   <div>
-                    <h5>{weatherData?.forecast.forecastday[0].day.maxtemp_c}°</h5> 
+                    <h5>{weatherData?.forecast.forecastday[0].day.mintemp_c}°</h5> 
                     <img src={min} alt="" />
                   </div>
                 </div>
